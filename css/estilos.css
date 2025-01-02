@@ -114,6 +114,8 @@ filter: blur*/
 .gallery__img {
     width: 100px;
     height: 100px;
+    max-width: 10px; /* Tamaño máximo deseado */
+    max-height: 15px; /* Tamaño máximo deseado */
     object-fit: cover;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
