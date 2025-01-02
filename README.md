@@ -5,6 +5,7 @@
 1. `Layout Principal:` Crear un HTML con un layout de grid con 3 columnas y 3 filas, con un header, un main, un sidebar y un footer. Características:
 
 - el `header` debe ocupar toda la fila superior y ser de 100px.
+
 - el `main` debe tener la clase contenido y ocupar 2/3 de la fila central.
 - el `sidebar` debe tener la clase sidebar y ocupar 1/3 de la fila central.
 - el `footer` debe ocupar toda la fila inferior y ser de 100px.

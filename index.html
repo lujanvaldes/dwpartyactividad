@@ -12,31 +12,31 @@
 
 <body class="dark-mode">
     <header class="header">
-        <p class="header__txt">Header</p>
-        <button class="header__button">MODO</button>
+        <p class="header__txt">FALLAS</p>
+        <button class="header__button">modo</button>
     </header>
 
     <main class="main">
         <section class="hero">
             <h1 class="hero__h1">Web Party DW!</h1>
-            <img src="" alt="TEXTO ALTERNATIVO" class="hero__img">
+            <img src="/img/hero imagen.jpg" alt="falla del ayuntamiento 2024" class="hero__img">
         </section>
 
         <section class="container">
             <div class="container__caja isActivated">
-                <p class="container__txt">Hazme click!</p>
+                <p class="container__txt">Ver más</p>
             </div>
         </section>
 
         <section class="gallery">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
-            <img src="" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 1.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 2.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 3.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 4.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 5.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 6.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 7.jpg" alt="" class="galerry__img isActivated">
+            <img src="/img/imagen 8.jpg" alt="" class="galerry__img isActivated">
         </section>
     </main>
 
@@ -44,20 +44,66 @@
         <h2>Sidebar</h2>
 
         <div class="acordeon">
+            <div class="acordeon__item isOpen">
+                <h3 class="acordeon__title">Acordeón 1</h3>
+                <div class="acordeon__txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                </div>
+            </div>
 
+            <div class="acordeon__item">
+                <h3 class="acordeon__title">Acordeón 2</h3>
+                <div class="acordeon__txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                </div>
+            </div>
+
+            <div class="acordeon__item">
+                <h3 class="acordeon__title">Acordeón 3</h3>
+                <div class="acordeon__txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                </div>
+            </div>
         </div>
     </aside>
 
-<footer class="footer">
-    <p>footer</p>
-</footer>
+    <footer class="footer">
+        <p>footer</p>
+    </footer>
 
-<script>
+    <script>
+
+        //dark mode
+        const btn = document.querySelector('.header__button');
+        const body = document.querySelector('body');
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        //acordeón (sidebar)
+        const lista_acordeon = document.querySelectorAll('.acordeon__item');
+        lista_acordeon.forEach(item => {
+            item.addEventListener('click', () => {
+                lista_acordeon.forEach(item => {
+                    item.classList.remove('isOpen');
+                });
+                item.classList.add('isOpen');
+            });
+        });
+
+        //botón ver más
+        const caja = document.querySelector('.container__caja');
+
+        caja.addEventListener('click', () => {
+            caja.innerHTML = "Me activaron!";
+            caja.classList.add('isActivated');
+        });
+
+        
 
 
-
-
-    
-</script>
+    </script>
 </body>
+
 </html>
